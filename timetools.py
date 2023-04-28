@@ -6,9 +6,11 @@ import datetime # Python's internal date-time library
 
 def datediff(d1, d2):
     """Calculates the difference between two dates in days
+
     Args:
         d1 (str): A date in ISO format YYYY-MM-DD
         d2 (str): A date in ISO format YYYY-MM-DD
+
     Returns:
         int: absolute differnce in days
     """
@@ -19,9 +21,11 @@ def datediff(d1, d2):
 
 def timediff(t1, t2):
     """Calculates the difference between two time values
+
     Args:
         t1 (str): time value in format hh:mm:ss
         t2 (str): time value in format hh:mm:ss
+
     Returns:
         float: time difference in hours
     """
@@ -35,10 +39,12 @@ def timediff(t1, t2):
 
 def datediff2(d1, d2, unit):
     """Returns difference between 2 dates in chosen unit (day, month or year)
+
     Args:
         d1 (str): 1 st date in ISO format (YYYY-mm-dd)
         d2 (str): 2 nd date in ISO format (YYYY-mm-dd)
         unit (str): unit to return
+
     Returns:
         float: diffrence between dates in desired units
     """
@@ -52,6 +58,7 @@ def datediff2(d1, d2, unit):
 
 def timediff2(t1, t2, unit):
     """Calculates the difference between two time values in chosen unit (day, minute or second)
+
     Args:
         t1 (str): time value in format hh:mm:ss
         t2 (str): time value in format hh:mm:ss

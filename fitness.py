@@ -9,9 +9,11 @@ import math
 
 def laske_bmi(paino, pituus):
     """Laskee painoindeksin (BMI)
+
     Args:
         paino (float): paino (kg)
         pituus (float): pituus (cm)
+
     Returns:
         float: painoindeksi desimaalin tarkkuudella
     """
@@ -24,10 +26,12 @@ def laske_bmi(paino, pituus):
 # Määritellään funktio aikuisen kehonrasvaprosentin laskemiseen
 def aikuisen_rasvaprosentti(bmi, ika, sukupuoli):
     """_summary_
+
     Args:
         bmi (float): painoindeksi
         ika (float): henkilön ikä
         sukupuoli (float): 1 -> mies, 0 -> nainen
+
     Returns:
         float: kehon rasvaprosentti (aikuinen)
     """
@@ -40,10 +44,12 @@ def aikuisen_rasvaprosentti(bmi, ika, sukupuoli):
 
 def lapsen_rasvaprosentti(bmi, ika, sukupuoli):
     """Laskee lapsen kehon rasvaprosentin
+
     Args:
         bmi (float): painoindeksi
         ika (float): ikä
         sukupuoli (float): poika -> 1, tyttö -> 0
+
     Returns:
         float: kehon rasvaprosentti (lapsi)
     """
@@ -54,10 +60,12 @@ def lapsen_rasvaprosentti(bmi, ika, sukupuoli):
 
 def usarasvaprosentti_mies(pituus, vyotaron_ymparys, kaulan_ymparys):
     """Laskee miehen rasvaprosentin USA:n armeijan kaavalla
+
     Args:
         pituus (float): pituus (cm)
         vuotaron_ymparys (float): vatsan ympärysmitta (cm)
         kaulan_ymparys (flaot): kaulan ympärusmitta (cm)
+
     Returns:
         float: rasvaprosentti
     """
@@ -70,16 +78,18 @@ def usarasvaprosentti_mies(pituus, vyotaron_ymparys, kaulan_ymparys):
     # Lasketaan rasvaprosentti
     usarprosentti = 86.010 * math.log10(tuuma_vyotaron_ymparys -
                                         tuuma_kaulan_ymparys) - 70.041 * math.log10(tuuma_pituus) + 36.76
-    return usarprosentti
+    return round(usarprosentti,1)
 
 
 def usarasvaprosentti_nainen(pituus, vyotaron_ymparys, lantion_ymparys, kaulan_ymparys):
     """Laskee naisen kehon rasvaprosentin USA:n armeijan kaavalla
+
     Args:
         pituus (float): pituus (cm)
         vyotaron_ymparys (float): vyötärön ympärysmitta (cm)
         lantion_ymparys (float): lantion ympärysmitta (cm)
         kaulan_ymparys (float): kaulan ympärysmitta (cm)
+
      Returns:
         float: rasvaprosentti
     """
@@ -91,7 +101,7 @@ def usarasvaprosentti_nainen(pituus, vyotaron_ymparys, lantion_ymparys, kaulan_y
 
     usa_rasvaprosentti = 163.205 * math.log10(tuuma_vyotaron_ymparys + tuuma_lantion_ymparys -
                                                tuuma_kaulan_ymparys) - 97.684 * math.log10(tuuma_pituus) - 78.387
-    return usa_rasvaprosentti
+    return round(usa_rasvaprosentti, 1)
 
 
 # Suoritetaan seuraavat rivit vain, jos tämä tiedosto on pääohjelma
