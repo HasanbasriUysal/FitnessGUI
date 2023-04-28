@@ -34,7 +34,7 @@ def test_dateTimeDiff2():
     assert timetools.dateTimeDiff2("2023-04-27 10:00:00","2023-04-28 12:30:00","hour") == 26.5
     assert timetools.dateTimeDiff2("2023-04-27 10:00:00","2023-04-28 12:30:00","minute") == 1590
 
-def test_sortWeekday():
+def test_finnishWeekdayOrder():
     assert timetools.finnishWeekdayOrder("perjantai") == "perjantai on viikon 5. päivä"
     input_value = "mantai"
     assert timetools.finnishWeekdayOrder(input_value) == f"{input_value} ei ole viikonpäivä, tarkista syötteesi"
